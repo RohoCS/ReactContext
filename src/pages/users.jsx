@@ -1,13 +1,16 @@
-import React from "react";
+import { useContext } from "react";
 import { PulseLoader } from "react-spinners";
-import { getInitData } from "../hooks/getInitData";
+import { getInitData } from "../hooks/useGetInitData";
+
+import { LangContext } from "../context/LangContext.jsx";
 
 export default function Comments() {
   const { isLoading, data, error } = getInitData("users");
+  const { t } = useContext(LangContext);
 
   return (
     <div>
-      <h1>Users</h1>
+      <h1>{t("Users")}</h1>
       {isLoading && <PulseLoader color={"red"} />}
 
       {data && !isLoading && (

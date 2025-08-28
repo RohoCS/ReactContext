@@ -1,3 +1,8 @@
+import { useContext } from "react";
+
+import { LangContext } from "../context/LangContext.jsx";
+
 export default function Photos() {
-  return <h1>Home Page</h1>;
+  const { t } = useContext(LangContext);
+  return <h1>{t("Home")}</h1>;
 }

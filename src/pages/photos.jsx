@@ -1,13 +1,16 @@
-import React from "react";
+import { useContext } from "react";
 import { PulseLoader } from "react-spinners";
-import { getInitData } from "../hooks/getInitData";
+import { getInitData } from "../hooks/useGetInitData";
+
+import { LangContext } from "../context/LangContext.jsx";
 
 export default function Photos() {
   const { isLoading, data, error } = getInitData("photos");
+  const { t } = useContext(LangContext);
 
   return (
     <div>
-      <h1>Photos</h1>
+      <h1>{t("Photos")}</h1>
       {isLoading && <PulseLoader color={"red"} />}
 
       {data && !isLoading && (

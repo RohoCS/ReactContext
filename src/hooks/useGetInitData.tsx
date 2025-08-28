@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export function getInitData(id: number) {
+import { apiUrl } from "../const.jsx";
+
+export function getInitData(type: string, id: string) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
@@ -10,9 +12,7 @@ export function getInitData(id: number) {
     async function fetchData() {
       setIsLoading(true);
       try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/posts/" + id
-        );
+        const response = await axios.get(apiUrl + type + (id ? "/" + id : ""));
         setData(response.data);
         setError("");
       } catch (error) {

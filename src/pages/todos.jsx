@@ -1,13 +1,16 @@
-import React from "react";
+import { useContext } from "react";
 import { PulseLoader } from "react-spinners";
-import { getInitData } from "../hooks/getInitData";
+import { getInitData } from "../hooks/useGetInitData";
+
+import { LangContext } from "../context/LangContext.jsx";
 
 export default function Todos() {
   const { isLoading, data, error } = getInitData("todos");
+  const { t } = useContext(LangContext);
 
   return (
     <div>
-      <h1>Todos</h1>
+      <h1>{t("Todos")}</h1>
       {isLoading && <PulseLoader color={"red"} />}
 
       {data && !isLoading && (
@@ -19,7 +22,8 @@ export default function Todos() {
                   {todo.id}. {todo.title}
                 </h2>
                 <p>
-                  Completed: <input type="checkbox" checked={todo.completed} />
+                  Completed:{" "}
+                  <input type="checkbox" checked={todo.completed} disabled />
                 </p>
               </div>
             ))}

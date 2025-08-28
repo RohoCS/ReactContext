@@ -1,0 +1,22 @@
+:root {
+  --background-primary-dark: rgba(0, 0, 0, 0.795);
+  --accent-dark: rgba(255, 255, 255, 0.795);
+
+  --background-primary-light: rgb(206, 205, 205);
+  --accent-light: rgba(0, 0, 0, 0.795);
+}
+
+[data-theme='dark'] {
+  --background-primary: var(--background-primary-dark);
+  --accent: var(--accent-dark);
+}
+
+[data-theme='light'] {
+  --background-primary: var(--background-primary-light);
+  --accent: var(--accent-light);
+}
+
+html {
+  color: var(--accent);
+  background-color: var(--background-primary);
+}
