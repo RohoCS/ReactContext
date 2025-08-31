@@ -94,7 +94,6 @@
   border-color: #bbb;
 }
 
-/* Темная тема */
 [data-theme="dark"] .settings-dropdown {
   background: #2d2d2d;
   border-color: #444;
@@ -120,7 +119,6 @@
   border-color: #666;
 }
 
-/* Адаптивность */
 @media (max-width: 600px) {
   .settings-dropdown {
     right: -50px;

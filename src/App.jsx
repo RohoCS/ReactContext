@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// import NavMenu from "./components/NavMenu";
 import { elContent } from "./const";
-// import Settings from "./components/Settings";
 import { ThemeProvider } from "./context/ThemeContext";
 import { LangProvider } from "./context/LangContext.jsx";
 

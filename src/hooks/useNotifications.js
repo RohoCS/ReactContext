@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useContext } from "react";
 import { addNotification } from "../store/notificationsSlice";
 import { LangContext } from "../context/LangContext";
@@ -13,7 +13,6 @@ export const useNotifications = () => {
 
   const showNotification = (message, type = "info", duration = 5000) => {
     const id = generateId();
-    // Переводим сообщение если оно передано как ключ для перевода
     const translatedMessage = t(message);
     dispatch(
       addNotification({ id, message: translatedMessage, type, duration })
