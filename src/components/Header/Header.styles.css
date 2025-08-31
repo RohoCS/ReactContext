@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 101;
+  background-color: #D8C3A5;
+  transition: background-color 0.3s ease;
+  /* border-bottom: 1px solid black; */
+}
+
+/* Темная тема - хеддер чуть светлее основного фона */
+[data-theme='dark'] .header {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navcon {
+  width: 100%;
+  display: flex;
+  max-width: 1280px;
+  align-items: center;
+  justify-content: space-between;
+}

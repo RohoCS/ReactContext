@@ -1,0 +1,129 @@
+.settings-container {
+  position: relative;
+  display: inline-block;
+}
+
+.settings-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: inherit;
+}
+
+.settings-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.settings-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.settings-button:hover .settings-icon {
+  transform: rotate(90deg);
+}
+
+.settings-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  min-width: 200px;
+  z-index: 1000;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.settings-section {
+  margin-bottom: 16px;
+}
+
+.settings-section:last-child {
+  margin-bottom: 0;
+}
+
+.settings-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.settings-select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.settings-select:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+.settings-select:hover {
+  border-color: #bbb;
+}
+
+/* Темная тема */
+[data-theme="dark"] .settings-dropdown {
+  background: #2d2d2d;
+  border-color: #444;
+  color: #fff;
+}
+
+[data-theme="dark"] .settings-section label {
+  color: #fff;
+}
+
+[data-theme="dark"] .settings-select {
+  background: #3d3d3d;
+  border-color: #555;
+  color: #fff;
+}
+
+[data-theme="dark"] .settings-select:focus {
+  border-color: #64b5f6;
+  box-shadow: 0 0 0 2px rgba(100, 181, 246, 0.1);
+}
+
+[data-theme="dark"] .settings-select:hover {
+  border-color: #666;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .settings-dropdown {
+    right: -50px;
+    min-width: 180px;
+  }
+}

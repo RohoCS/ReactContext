@@ -1,0 +1,54 @@
+.navmenu__list {
+  height: 100%;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  margin: 0;
+}
+
+.navmenu__item {
+  padding: 0 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.navmenu__item:hover {
+  background-color: #EAE7DC;
+}
+
+/* Стили для ссылок */
+.navmenu__link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.navmenu__link.active {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Темная тема - светлый текст */
+[data-theme='dark'] .navmenu__item {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme='dark'] .navmenu__item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Стили для ссылок в темной теме */
+[data-theme='dark'] .navmenu__link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme='dark'] .navmenu__link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+[data-theme='dark'] .navmenu__link.active {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+}

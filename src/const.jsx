@@ -6,6 +6,7 @@ import Albums from "./pages/albums";
 import Photos from "./pages/photos";
 import Todos from "./pages/todos";
 import Users from "./pages/users";
+import NotificationsDemo from "./pages/Notifications/notifications-demo";
 
 export const elContent = [
   { link: "/", text: "Home", el: <Home /> },
@@ -16,5 +17,10 @@ export const elContent = [
   { link: "/photos", text: "Photos", el: <Photos /> },
   { link: "/todos", text: "Todos", el: <Todos /> },
   { link: "/users", text: "Users", el: <Users /> },
+  {
+    link: "/notifications-demo",
+    text: "Notifications",
+    el: <NotificationsDemo />,
+  },
 ];
 export const apiUrl = "https://jsonplaceholder.typicode.com/";

@@ -1,7 +1,3 @@
-import { createContext } from "react";
-
-export const LangContext = createContext(null);
-
 export const suppLangs = ["English", "Українська", "Русский"];
 
 export const translations = [
@@ -15,8 +11,21 @@ export const translations = [
     Photos: "Фотографії",
     Todos: "Замітки",
     Users: "Користувачі",
+    Shop: "Магазин",
+    Notifications: "Сповіщення",
     Theme: "Тема",
     Language: "Мова",
+    "This is an informational notification": "Це інформаційне сповіщення",
+    "Operation completed successfully!": "Операція виконана успішно!",
+    "Warning! This is a warning": "Увага! Це попередження",
+    "An error occurred while performing the operation":
+      "Сталася помилка при виконанні операції",
+    "Show Info": "Показати Інфо",
+    "Show Success": "Показати Успіх",
+    "Show Warning": "Показати Попередження",
+    "Show Error": "Показати Помилку",
+    "Show multiple": "Показати кілька",
+    "Demo notification system": "Демо системи сповіщень",
   },
   {
     Home: "Главная",
@@ -27,7 +36,20 @@ export const translations = [
     Photos: "Фотографии",
     Todos: "Заметки",
     Users: "Пользователи",
+    Shop: "Магазин",
+    Notifications: "Уведомления",
     Theme: "Тема",
     Language: "Язык",
+    "This is an informational notification": "Это информационное уведомление",
+    "Operation completed successfully!": "Операция выполнена успешно!",
+    "Warning! This is a warning": "Внимание! Это предупреждение",
+    "An error occurred while performing the operation":
+      "Произошла ошибка при выполнении операции",
+    "Show Info": "Показать Инфо",
+    "Show Success": "Показать Успех",
+    "Show Warning": "Показать Предупреждение",
+    "Show Error": "Показать Ошибку",
+    "Show multiple": "Показать несколько",
+    "Demo notification system": "Демо системы уведомлений",
   },
 ];
